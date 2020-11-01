@@ -1,10 +1,13 @@
 import React from "react";
 
 const Login = ({ history }) => {
+  
   const loginIn = () => {
-    history.push("/orders");
     localStorage.setItem("token", "batman");
+    history.push("/orders");
+    window.location.reload();
   };
+  
   return (
     <div>
       <div>Login screen</div>
